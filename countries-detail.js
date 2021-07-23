@@ -4,6 +4,9 @@ xhr.onload = function () {
     var data = JSON.parse(this.response);
     listFlag(data);
     listCountryDetails(data);
+}
+xhr.onerror = function () {
+    console.log("Error", this.statusText);
 };
 xhr.send();
 
